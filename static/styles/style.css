@@ -1,0 +1,23 @@
+p{
+    font-size: 12px;
+    width: 330px;
+    
+    /* margin - Отсуп наружу */
+    /* padding - Отсут вовнутрь */
+}
+.name
+{
+    font-weight: bold;
+}
+
+.conteiner
+{
+    margin: 10px;
+    display: inline-block;
+    text-align:left;   
+}
+
+
+a>img {
+    width: 500px;
+}
