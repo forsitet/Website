@@ -4,54 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вход</title>
+    <title>Регистрация</title>
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="static/styles/registration.css">
 </head>
 
 <body>
     <div class="container">
-        <form action="">
+        <form action="" id="regForm">
             <h1>Регистрация</h1>
 
             <div class="input-group">
                 <div class="input-field">
                     <label for="Фамилия">Фамилия*</label>
-                    <input type="text" placeholder="Будин" required>
+                    <input type="text" id="surename" placeholder="Иванов" required>
                 </div>
                 <div class="input-field">
                     <label for="Имя">Имя*</label>
-                    <input type="text" placeholder="Денис" required>
+                    <input type="text" id="name" placeholder="Иван" required>
                 </div>
             </div>
 
             <div class="input-group">
                 <div class="input-field">
                     <label for="Логин">Логин*</label>
-                    <input type="text" placeholder="d_e_v_e_l_o_p_e_r" required>
+                    <input type="login" id="login" placeholder="d_e_v_e_l_o_p_e_r" required>
                 </div>
                 <div class="input-field">
                     <label for="Почта">Почта*</label>
-                    <input type="email" placeholder="Введите почту" required>
+                    <input type="text" id="mail" placeholder="Введите почту" required>
                 </div>
             </div>
 
             <div class="input-group">
                 <div class="input-field">
                     <label for="Пароль">Пароль</label>
-                    <input type="password" placeholder="Пароль" required>
+                    <input type="password" id="password" placeholder="Пароль" required>
                 </div>
                 <div class="input-field">
                     <label for="Подтверждение пароля">Подтверждение пароля*</label>
-                    <input type="password" placeholder="Подтверждение пароля" required>
+                    <input type="password" id="passwordVerification" placeholder="Подтверждение пароля" required>
                 </div>
             </div>
 
             
             <button type="submit" class="btn">Зарегистрироваться</button>
 
+
         </form>
     </div>
+    <script src="static/js/registration.js"></script>
 </body>
 
 </html>
