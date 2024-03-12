@@ -1,67 +1,233 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="static/styles/style.css">
-    <style>
-        span {
-            font-style: normal;
-        }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="static/styles/style.css" />
+    <title>MIET book</title>
 </head>
 
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
 
-    <div class="main">
-        <div class="outher">
-            <div class="conteiner">
-                <a href="https://vk.com/im?sel=305368916"><img src="static/images/bmwC6HJeJxk.jpg" alt="Картинка учебника препода">
-                <p class="name">Архитектура вычислительных систем (организация ЭВМ) и Ассемблер</p>
-                <p>Гагарина Л.Г., Кононова А.И.</p></a>
-            </div>
-            <div class="conteiner">
-                <a href="#"><img src="static/images/bmwC6HJeJxk.jpg" alt="Картинка учебника препода">
-                <p class="name">Архитектура вычислительных систем (организация ЭВМ) и Ассемблер</p>
-                <p>Гагарина Л.Г., Кононова А.И.</p></a>
-            </div>
-            <div class="conteiner">
+                <a class="navbar-brand" href="index.html"><img src="static/images/Group 1321316136.svg" alt=""
+                        style="width: 100px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-                <a href="#"><img src="static/images/bmwC6HJeJxk.jpg" alt="Картинка учебника препода">
-                <p class="name">Архитектура вычислительных систем (организация ЭВМ) и Ассемблер</p>
-                <p>Гагарина Л.Г., Кононова А.И.</p></a>
-            </div>
-    
-        </div>    
-        <div class="outher">
-            
-            <div class="conteiner">
-                <a href="#">
-                <img src="static/images/bmwC6HJeJxk.jpg" alt="Картинка учебника препода">
-                <p class="name">Архитектура вычислительных систем (организация ЭВМ) и Ассемблер</p>
-                <p>Гагарина Л.Г., Кононова А.И.</p>
-            </a>
-            </div>
-            <a href="">
-            <div class="conteiner">
-                <img src="static/images/bmwC6HJeJxk.jpg" alt="Картинка учебника препода">
-                <p class="name">Архитектура вычислительных систем (организация ЭВМ) и Ассемблер</p>
-                <p>Гагарина Л.Г., Кононова А.И.</p>
-            </a>
-            </div>
-            <div class="conteiner">
-                    <a href="#">
-                    <img src="static/images/bmwC6HJeJxk.jpg" alt="Картинка учебника препода">
-                    <p class="name">Архитектура вычислительных систем (организация ЭВМ) и Ассемблер</p>
-                    <p>Гагарина Л.Г., Кононова А.И.</p>
+                        <li class="nav-item">
+                            <a class="nav-link active" style="color: white;" aria-current="page" href="index.html">Главная</a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav flex-grow-2 mx-auto mb-2 mb-lg-0 search">
+                        <li>
+                            <form class="d-flex flex-nowrap" role="search">
+                                <input class="form-control me-0 form-search" type="search" placeholder="Найти" aria-label="Search">
+                                <button class="btn btn-light btn-search" type="submit">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="25" fill="currentColor"
+                                        class="bi bi-search" viewBox="0 0 16 16">
+                                        <path
+                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                    </svg>
+                                </button>
+                            </form>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Вход</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="registration.html">Регистрация</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.html">Мой профиль</a>
+                        </li>
+                    </ul>
+
                 </div>
-            </a>
-    
-        </div>
-    </div>
+            </div>
+        </nav>
+    </header>
 
+    <section>
+        <!-- Поиск для мобильных устройств -->
+        <ul class="navbar-nav flex-fill mx-auto mb-2 mb-lg-0 search-mobile">
+            <li>
+                <form class="d-flex flex-nowrap" role="search">
+                    <input class="form-control me-0 form-search" type="search" placeholder="Найти" aria-label="Search">
+                    <button class="btn btn-light btn-search" type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="25" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                        </svg>
+                    </button>
+                </form>
+            </li>
+        </ul>
+
+        <div class="container-fluid mt-4">
+            <div class="row">
+                <div class="col-lg-2">
+                    Боковая панель
+                </div>
+
+                <div class="col-lg-9 col-md-12">
+
+                    <div class="row">
+
+                        <div class="col-lg-4 col-md-6 mt-4 mb-5">
+                            <div class="card">
+
+                                <a href="card.html">
+                                    <img src="static/images/books/accembler.png" class="card-img-top"
+                                        alt="Учебник по ассемблеру">
+                                    <div class="card-body">
+                                        <p class="card-text-name">Архитектура вычислительных систем и Ассемблер</p>
+                                        <p class="card-text-author">Гагарина Л.Г., Кононова А.И.</p>
+                                        <a href="card.html" class="btn btn-primary">Подробнее</a>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-4 col-md-6 mt-4 mb-5">
+                            <div class="card">
+
+                                <a href="#">
+                                    <img src="static/images/books/English.jpg" class="card-img-top"
+                                        alt="Учебник по архитектуре">
+                                    <div class="card-body">
+                                        <p class="card-text-name">Английский язык</p>
+                                        <p class="card-text-author">Орловская И.В., Самсонова Л.С., Скубриева А.И.</p>
+                                        <a href="#" class="btn btn-primary">Подробнее</a>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-4 col-md-6 mt-4 mb-5">
+                            <div class="card">
+                                <a href="#">
+                                    <img src="static/images/books/geometry.jpg" class="card-img-top"
+                                        alt="Учебник по электронике">
+                                    <div class="card-body">
+                                        <p class="card-text-name">Геометрия</p>
+                                        <p class="card-text-author">Гусев В.А., Кожухов И.Б., <br>Прокофьев А.А.</p>
+                                        <a href="#" class="btn btn-primary">Подробнее</a>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mt-4 mb-5">
+                            <div class="card">
+                                <a href="#">
+                                    <img src="static/images/books/inform.webp" class="card-img-top"
+                                        alt="Учебник по электронике">
+                                    <div class="card-body">
+                                        <p class="card-text-name">Основы инфомрационных технологий</p>
+                                        <p class="card-text-author">Гагрина Л.Г., Слюсарь В.В., <br>Слюсарь М.В.</p>
+                                        <a href="#" class="btn btn-primary">Подробнее</a>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mt-4 mb-5">
+                            <div class="card">
+                                <a href="#">
+                                    <img src="static/images/books/math 10-11.jpg" class="card-img-top"
+                                        alt="Учебник по электронике">
+                                    <div class="card-body">
+                                        <p class="card-text-name">Математика 10-11 класс</p>
+                                        <p class="card-text-author">Гусев В.А., Кожухов И.Б., <br>Прокофьев А.А.</p>
+                                        <a href="#" class="btn btn-primary">Подробнее</a>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mt-4 mb-5">
+                            <div class="card">
+                                <a href="#">
+                                    <img src="static/images/books/math.jpg" class="card-img-top"
+                                        alt="Учебник по электронике">
+                                    <div class="card-body">
+                                        <p class="card-text-name">Сборник задач для втузов</p>
+                                        <p class="card-text-author">Гагарина Л.Г., Кононова А.И.</p>
+                                        <a href="#" class="btn btn-primary">Подробнее</a>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mt-4 mb-5">
+                            <div class="card">
+                                <a href="#">
+                                    <img src="static/images/books/Po.jpg" class="card-img-top"
+                                        alt="Учебник по электронике">
+                                    <div class="card-body">
+                                        <p class="card-text-name">Конструктор Программного обеспечения</p>
+                                        <p class="card-text-author">Гагарина Л.Г., Кононова А.И.</p>
+                                        <a href="#" class="btn btn-primary">Подробнее</a>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mt-4 mb-5">
+                            <div class="card">
+                                <a href="#">
+                                    <img src="static/images/books/proga.jpg" class="card-img-top"
+                                        alt="Учебник по электронике">
+                                    <div class="card-body">
+                                        <p class="card-text-name">Технология параллельного программирования</p>
+                                        <p class="card-text-author">Лупин С.А., Посыпкин М.А.</p>
+                                        <a href="#" class="btn btn-primary">Подробнее</a>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="col-lg-1 col-md-1">
+                    Боковая панель
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
