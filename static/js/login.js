@@ -17,6 +17,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     }
     else if (!(/^(([^<>()[\]\\.,;:\s@"]+(\.[!<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[1-9]{1,3}\.[1-9]{1,3}\.[1-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(emailV))) {
         errorEvent(email, 'Неверный формат почты. (Должно содержать @ и только английские буквы)');
+        return;
     }
     else{
         successEvent(email);
@@ -24,12 +25,11 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
     if (passwordV === ''){
         errorEvent(password, 'Вы не ввели пароль');
+        return;
     }
     else{
         successEvent(password);
     }
-
-    
     this.submit();
 });
 

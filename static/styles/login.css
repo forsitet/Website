@@ -68,7 +68,7 @@
     outline: 0;
   }
 
-  .form-group .error input{
+  .form-group.error input{
     border-color: #ff3860;
   }
 
@@ -81,8 +81,8 @@
     margin-left: 2px;
   }
   
-  .form-group .success input{
-    border-color: #09c360;
+  .form-group.success input{
+    border-color: rgb(5, 54, 176);
   }
 
   
@@ -91,7 +91,7 @@
     justify-content: space-between;
     font-size: 14.5px;
     margin: -10px 0px 15px;
-    padding-top: 5px;
+    padding-top: 10px;
   }
 
   .remember-forgot label input{
