@@ -18,7 +18,7 @@ document.getElementById('regForm').addEventListener('submit', function(event) {
 
     //Валидация фамилии
     if (surenameV === '') {
-        errorEvent(surename, 'Вы не ввели фамилию');
+        errorEvent(surename, 'Вы не ввели фамилию.');
     }
     else if (!(surenameV.length >= 2) || !(surenameV.length <= 10)) {
         errorEvent(surename, 'Фамилия должнa содержать не менее 2 символов и не более 10 символов.');
@@ -32,7 +32,7 @@ document.getElementById('regForm').addEventListener('submit', function(event) {
 
     //Валидация имени
     if (nameV === ''){
-        errorEvent(namee, 'Вы не ввели имя');
+        errorEvent(namee, 'Вы не ввели имя.');
     }
     else if (!(nameV.length >= 2) || !(nameV.length <= 10)) {
         errorEvent(namee, 'Имя должно содержать не менее 2 символов и не более 10 символов.');
@@ -48,10 +48,10 @@ document.getElementById('regForm').addEventListener('submit', function(event) {
 
     //Валидация логина
     if (loginV === ''){
-        errorEvent(login, 'Вы не ввели логин');
+        errorEvent(login, 'Вы не ввели логин.');
     }
     else if (!((/^[A-Za-z0-9_]+$/).test(loginV))) {
-        errorEvent(login, 'Логин должнен содержать буквы, цифры и _ . Например, "d_e_v_e_l_o_p_e_r123455"');
+        errorEvent(login, 'Логин должнен содержать буквы, цифры и _ . Например, "d_e_v_e_l_o_p_e_r123455".');
         return;
     }
     else{
@@ -60,7 +60,7 @@ document.getElementById('regForm').addEventListener('submit', function(event) {
 
     //Валидация почты
     if (emailV === ''){
-        errorEvent(email, 'Вы не ввели почту');
+        errorEvent(email, 'Вы не ввели почту.');
     }
     else if (!(/^(([^<>()[\]\\.,;:\s@"]+(\.[!<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[1-9]{1,3}\.[1-9]{1,3}\.[1-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(emailV))) {
         errorEvent(email, 'Неверный формат почты. Почта должна иметь вид: 123abС@mail.ru');
@@ -72,16 +72,25 @@ document.getElementById('regForm').addEventListener('submit', function(event) {
 
 
     //Пароль
-    if (!(passwordV.length >= 12)) {
-        errorEvent('Пароль должен содержать не менее 12 символов.');
+    if (passwordV === ''){
+        errorEvent(password, 'Вы не ввели пароль.');
+    }
+    else if (!(passwordV.length >= 12)) {
+        errorEvent(password, 'Пароль должен содержать не менее 12 символов.');
         return;
     }
-    if (!(passwordVerV === passwordV)){
-        alert('Пароли не совпадают');
+    else {
+        successEvent(password);
+    }
+    
+    if (passwordVerV === ''){
+        errorEvent(passwordVer, 'Вы не ввели подтверждение пароля.');
+    }
+    else if (!(passwordVerV === passwordV)){
+        errorEvent(passwordVer, 'Пароли не совпадают.');
         return;
     }
     else{
-        successEvent(password);
         successEvent(passwordVer);
     }
 
