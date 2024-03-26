@@ -1,58 +1,109 @@
+const surename = document.getElementById('surename');
+const namee = document.getElementById('name');
+const login = document.getElementById('login');
+const email = document.getElementById('mail');
+const password = document.getElementById('password');
+const passwordVer = document.getElementById('passwordVerification');
+
+
 document.getElementById('regForm').addEventListener('submit', function(event) {
     event.preventDefault();
-
-    var surename = document.getElementById('surename').value;
-    var name = document.getElementById('name').value;
-    var login = document.getElementById('login').value;
-    var email = document.getElementById('mail').value;
-    var password = document.getElementById('password').value;
-    var passwordVerification = document.getElementById('passwordVerification')
-
     //Валидация
+    const surenameV = surename.value.trim();
+    const nameV = namee.value.trim();
+    const loginV = login.value.trim();
+    const emailV = email.value.trim();
+    const passwordV = password.value.trim();
+    const passwordVerV = passwordVer.value.trim();
 
     //Валидация фамилии
-    if (!(surename.length >= 2) || !(surename.length <= 10)) {
-        alert('Фамилия должнa содержать не менее 2 символов и не более 10 символов.');
-        return;
+    if (surenameV === '') {
+        errorEvent(surename, 'Вы не ввели фамилию');
+    }
+    else if (!(surenameV.length >= 2) || !(surenameV.length <= 10)) {
+        errorEvent(surename, 'Фамилия должнa содержать не менее 2 символов и не более 10 символов.');
     } 
-    if (!((/^[A-ZА-Я][a-zа-яё]*$/).test(surename))) {
-        alert('Фамилия должнa содержать только строчные буквы и одну заглавную букву.\nНапример, "Иванов".');
-        return;
+    else if (!((/^[A-ZА-Я][a-zа-яё]*$/).test(surenameV))) {
+        errorEvent(surename, 'Фамилия должнa содержать только строчные буквы и одну заглавную букву. Например, "Иванов".');
+    }
+    else{
+        successEvent(surename);
     }
 
     //Валидация имени
-    if (!(name.length >= 2) || !(name.length <= 10)) {
-        alert('Имя должно содержать не менее 2 символов и не более 10 символов.');
+    if (nameV === ''){
+        errorEvent(namee, 'Вы не ввели имя');
+    }
+    else if (!(nameV.length >= 2) || !(nameV.length <= 10)) {
+        errorEvent(namee, 'Имя должно содержать не менее 2 символов и не более 10 символов.');
         return;
     } 
-    if (!((/^[A-ZА-Я][a-zа-яё]*$/).test(name))) {
-        alert('Имя должно содержать только строчные буквы и одную букву.\nНапример, "Иван".');
+    else if (!((/^[A-ZА-Я][a-zа-яё]*$/).test(nameV))) {
+        errorEvent(namee, 'Имя должно содержать только строчные буквы и одную букву. Например, "Иван".');
         return;
+    }
+    else{
+        successEvent(namee);
     }
 
     //Валидация логина
-    if (!((/^[A-Za-z0-9_]+$/).test(login))) {
-        alert('Логин должнен содержать только буквы, цифры и нижнее подчёркивание (_).\nНапример, "d_e_v_e_l_o_p_e_r123455"');
+    if (loginV === ''){
+        errorEvent(login, 'Вы не ввели логин');
+    }
+    else if (!((/^[A-Za-z0-9_]+$/).test(loginV))) {
+        errorEvent(login, 'Логин должнен содержать буквы, цифры и _ . Например, "d_e_v_e_l_o_p_e_r123455"');
         return;
+    }
+    else{
+        successEvent(login);
     }
 
     //Валидация почты
-    if (!((/^[^\s@]+@[^\s@]+\.[^\s@]+$/).test(email))) {
-        alert('Неверный формат почты.\nПочта должна иметь вид: 123abС@mail.ru');
+    if (emailV === ''){
+        errorEvent(email, 'Вы не ввели почту');
+    }
+    else if (!(/^(([^<>()[\]\\.,;:\s@"]+(\.[!<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[1-9]{1,3}\.[1-9]{1,3}\.[1-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(emailV))) {
+        errorEvent(email, 'Неверный формат почты. Почта должна иметь вид: 123abС@mail.ru');
         return;
+    }
+    else{
+        successEvent(email);
     }
 
 
     //Пароль
-    if (!(password.length >= 12)) {
-        alert('Пароль должен содержать не менее 12 символов.');
+    if (!(passwordV.length >= 12)) {
+        errorEvent('Пароль должен содержать не менее 12 символов.');
         return;
     }
-     if (!(passwordVerification.test(password))){
-         alert('Пароли не совпадают');
-         return;
-     }
+    if (!(passwordVerV === passwordV)){
+        alert('Пароли не совпадают');
+        return;
+    }
+    else{
+        successEvent(password);
+        successEvent(passwordVer);
+    }
 
     
     this.submit();
 });
+
+const errorEvent = (element, message) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = message;
+    inputControl.classList.add('error');
+    inputControl.classList.remove('success');
+}
+
+
+const successEvent = element => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = '';
+    inputControl.classList.add('success');
+    inputControl.classList.remove('error');
+}

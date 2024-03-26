@@ -10,16 +10,17 @@
 </head>
 <body>
     <div class="container">
-        
         <form action="/" class="form" id="loginForm">
             <h1>Вход в аккаунт</h1>
             <div class="form-group">
-                <label for="email">Почта:</label>
-                <input type="text" id="mail" name="email" required>
+                <label for="email" id="label">Почта:</label>
+                <input type="text" id="mail" name="email">
+                <div class='error'></div>
             </div>
             <div class="form-group">
-                <label for="password">Пароль:</label>
-                <input type="password" id="password" name="password" required>
+                <label for="password" id="label">Пароль:</label>
+                <input type="password" id="password" name="password">
+                <div class='error'></div>
             </div>
             
             <div class="remember-forgot">
